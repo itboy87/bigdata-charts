@@ -32,7 +32,7 @@ The Apache Hadoop software library is a framework that allows for the distribute
 | httpfs.adminPort | int | `14001` |  |
 | httpfs.port | int | `14000` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"gradiant/hdfs"` |  |
+| image.repository | string | `"ghcr.io/fleeksoft/hbase/hdfs"` |  |
 | image.tag | string | `"2.7.7"` |  |
 | ingress.dataNode.annotations | object | `{}` |  |
 | ingress.dataNode.enabled | bool | `false` |  |
