@@ -10,7 +10,7 @@ metadata:
 spec:
   ports:
   - name: webhdfs
-    port: 50075
+    port: 9870
   clusterIP: None
   publishNotReadyAddresses: true
   selector:
