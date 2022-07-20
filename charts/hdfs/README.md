@@ -10,7 +10,7 @@ The Apache Hadoop software library is a framework that allows for the distribute
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | cgiraldo@gradiant.org |  |
+| sabeeh | mr.hussnain.it@gmail.com |  |
 
 ## Source Code
 

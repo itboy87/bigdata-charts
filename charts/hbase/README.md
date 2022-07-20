@@ -10,7 +10,7 @@ HBase is an open-source non-relational distributed database modeled after Google
 
 | Name | Email | Url |
 | ---- | ------ | --- |
-| cgiraldo | cgiraldo@gradiant.org |  |
+| sabeeh | mr.hussnain.it@gmail.com |  |
 
 ## Requirements
 
