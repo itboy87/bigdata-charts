@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: 2.0.1
+appVersion: 2.4.13
 description: HBase is an open-source non-relational distributed database modeled after
   Google's Bigtable and written in Java.
 home: https://hbase.apache.org/
@@ -8,13 +8,13 @@ maintainers:
 - email: cgiraldo@gradiant.org
   name: cgiraldo
 name: hbase
-version: 0.1.6
+version: 0.1.7
 dependencies:
 - name: hdfs
-  version: ~0.1.10
+  version: ~0.1.11
   repository: file://../hdfs
   condition: hdfs.enabled
 - name: zookeeper
-  version: ~6.3.0
+  version: 10.0.2
   repository: https://charts.bitnami.com/bitnami
   condition: zookeeper.enabled
