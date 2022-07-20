@@ -13,7 +13,7 @@ spec:
     port: {{ .Values.nameNode.port }}
     protocol: TCP
   - name: webhdfs
-    port: 50070
+    port: 9870
   clusterIP: None
   publishNotReadyAddresses: true
   selector:

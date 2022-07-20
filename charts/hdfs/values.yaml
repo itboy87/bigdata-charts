@@ -95,5 +95,5 @@ prometheus:
   ## ref: https://github.com/marcelmay/hadoop-hdfs-fsimage-exporter
   exporter:
     enabled: true
-    image: marcelmay/hadoop-hdfs-fsimage-exporter:1.2
+    image: marcelmay/hadoop-hdfs-fsimage-exporter:1.4.4
     port: 5556

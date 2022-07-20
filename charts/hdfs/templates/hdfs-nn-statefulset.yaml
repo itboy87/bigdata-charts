@@ -72,14 +72,14 @@ spec:
         readinessProbe:
           httpGet:
             path: /
-            port: 50070
-          initialDelaySeconds: 5
+            port: 9870
+          initialDelaySeconds: 10
           timeoutSeconds: 2
         livenessProbe:
           httpGet:
             path: /
-            port: 50070
-          initialDelaySeconds: 10
+            port: 9870
+          initialDelaySeconds: 15
           timeoutSeconds: 2
         volumeMounts:
         - name: hadoop-config
