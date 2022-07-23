@@ -1,22 +1,28 @@
 apiVersion: v1
 entries:
-  hdfs:
+  hbase:
   - apiVersion: v2
-    appVersion: 3.3.3
-    created: "2022-07-20T17:46:22.867094+05:00"
-    description: The Apache Hadoop software library is a framework that allows for
-      the distributed processing of large data sets across clusters of computers using
-      simple programming models.
-    digest: f9cfbee12cd3b66f8123d4aae308292c6dd6ace7b41c8b7dda05554467b6b795
-    home: https://hadoop.apache.org/
-    icon: http://hadoop.apache.org/images/hadoop-logo.jpg
+    appVersion: 2.4.13
+    created: "2022-07-23T13:30:07.729099+05:00"
+    dependencies:
+    - condition: hadoop.enabled
+      name: hadoop
+      repository: file://../hadoop
+      version: ~1.2.1
+    - condition: zookeeper.enabled
+      name: zookeeper
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.0.2
+    description: HBase is an open-source non-relational distributed database modeled
+      after Google's Bigtable and written in Java.
+    digest: 1c067fb705932066639a367b6d64a1ebb7fd8e5fa06338b368b6999394e6158b
+    home: https://hbase.apache.org/
+    icon: http://hbase.apache.org/images/hbase_logo_with_orca.png
     maintainers:
     - email: mr.hussnain.it@gmail.com
       name: sabeeh
-    name: hdfs
-    sources:
-    - https://github.com/apache/hadoop
+    name: hbase
     urls:
-    - hdfs-0.1.11.tgz
-    version: 0.1.11
-generated: "2022-07-20T17:46:22.86626+05:00"
+    - hbase-0.1.7.tgz
+    version: 0.1.7
+generated: "2022-07-23T13:30:07.725374+05:00"
