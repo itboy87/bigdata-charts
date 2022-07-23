@@ -15,9 +15,8 @@ HBase is an open-source non-relational distributed database modeled after Google
 ## Requirements
 
 | Repository | Name | Version |
-|------------|------|---------|
-| https://charts.bitnami.com/bitnami | zookeeper | ~6.3.0 |
-| https://gradiant.github.io/charts | hdfs | ~0.1.10 |
+|------------|------|--------|
+| https://charts.bitnami.com/bitnami | zookeeper | 10.0.2 |
 
 ## Values
 
@@ -40,8 +39,8 @@ HBase is an open-source non-relational distributed database modeled after Google
 | hbaseVersion | string | `"2.0.1"` |  |
 | hdfs.enabled | bool | `true` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
-| image.repository | string | `"gradiant/hbase-base"` |  |
-| image.tag | string | `"2.0.1"` |  |
+| image.repository | string | `"ghcr.io/fleeksoft/hbase/hbase-base"` |  |
+| image.tag | string | `"2.4.13.2"` |  |
 | prometheus.config.lowercaseOutputLabelNames | bool | `true` |  |
 | prometheus.config.lowercaseOutputName | bool | `true` |  |
 | prometheus.config.rules[0].labels.namespace | string | `"$1"` |  |
