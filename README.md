@@ -1,3 +1,4 @@
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/hbase)](https://artifacthub.io/packages/search?repo=hbase)
 # BigData Helm charts
 
 Curated Big Data charts for Kubernetes.
@@ -6,7 +7,6 @@ Curated Big Data charts for Kubernetes.
 hbase backup:
 
 [https://blog.clairvoyantsoft.com/hbase-incremental-table-backup-and-disaster-recovery-using-aws-s3-storage-aa2bc1b40744](https://blog.clairvoyantsoft.com/hbase-incremental-table-backup-and-disaster-recovery-using-aws-s3-storage-aa2bc1b40744)
-
 
 **Run hbase**
 
