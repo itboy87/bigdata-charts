@@ -3,7 +3,7 @@ entries:
   hbase:
   - apiVersion: v2
     appVersion: 2.4.13
-    created: "2022-07-23T13:30:07.729099+05:00"
+    created: "2022-07-23T13:32:17.056754+05:00"
     dependencies:
     - condition: hadoop.enabled
       name: hadoop
@@ -23,6 +23,6 @@ entries:
       name: sabeeh
     name: hbase
     urls:
-    - hbase-0.1.7.tgz
+    - https://itboy87.github.io/bigdata-charts/hbase-0.1.7.tgz
     version: 0.1.7
-generated: "2022-07-23T13:30:07.725374+05:00"
+generated: "2022-07-23T13:32:17.051402+05:00"
