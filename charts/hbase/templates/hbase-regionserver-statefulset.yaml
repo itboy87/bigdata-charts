@@ -69,6 +69,14 @@ spec:
           value: {{ .Values.conf.hadoopUserName }}
         resources:
 {{ toYaml .Values.hbase.regionServer.resources | indent 10 }}
+        startupProbe:
+          httpGet:
+            path: /
+            port: 16030
+          initialDelaySeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 60
+          periodSeconds: 5
         readinessProbe:
           httpGet:
             path: /

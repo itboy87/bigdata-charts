@@ -5,26 +5,26 @@
 # The base hadoop image to use for all components.
 # See this repo for image build details: https://github.com/Comcast/kube-yarn/tree/master/image
 image:
-  repository: gradiant/hbase-base
-  tag: 2.0.1
+  repository: ghcr.io/fleeksoft/hbase/hbase-base
+  tag: 2.4.13.2
   pullPolicy: IfNotPresent
 
 # The version of the hadoop libraries being used in the image.
-hbaseVersion: 2.0.1
+hbaseVersion: 2.4.13
 
 # Select antiAffinity as either hard or soft, default is 'soft'
 # 'hard' is recommended for higher availaility
 antiAffinity: "soft"
 
 conf:
-  hadoopUserName: hdfs
+  hadoopUserName: root
   hbaseSite:
-    hbase.rootdir:  # default is "hdfs://{{.Release.Name}}-hdfs-namenode:8020/hbase"
+    hbase.rootdir:  # default is "hdfs://{{.Release.Name}}-hdfs-namenode:9000/hbase"
     hbase.zookeeper.quorum:  # default is "{{.Release.Name}}-zookeeper:2181"
 
 hbase:
   master:
-    replicas: 1
+    replicas: 2
     resources:
       requests:
         memory: "256Mi"
@@ -33,7 +33,7 @@ hbase:
         memory: "2048Mi"
         cpu: "1000m"
   regionServer:
-    replicas: 1
+    replicas: 2
     resources:
       requests:
         memory: "256Mi"
@@ -49,7 +49,7 @@ prometheus:
   ## ref: https://github.com/prometheus/jmx_exporter
   ## ref: https://github.com/chuyeow/prometheus-jmx-exporter-kubernetes
   enabled: true
-  port: 5556
+  port: 9709
   # hbase-master pods runs two jvm processes: hbase and the thrift api.
   thriftPort: 5557
   resources: {}
@@ -74,10 +74,25 @@ prometheus:
     - pattern: .+
 
 # manage hdfs from dependencies
-hdfs:
+hadoop:
   enabled: true
+  hdfs:
+    dataNode:
+      replicas: 3
+  persistence:
+    nameNode:
+      enabled: true
+      storageClass: "do-block-storage"
+      size: 30Gi
+    dataNode:
+      enabled: true
+      storageClass: "do-block-storage"
+      size: 50Gi
 
 # manage zookeeper from dependencies
 zookeeper:
   enabled: true
-  replicaCount: 1
+  replicaCount: 3
+  maxClientCnxns: 1000
+  persistence:
+    enabled: false

@@ -10,10 +10,10 @@ maintainers:
 name: hbase
 version: 0.1.7
 dependencies:
-- name: hdfs
-  version: ~0.1.11
-  repository: file://../hdfs
-  condition: hdfs.enabled
+- name: hadoop
+  version: ~1.2.1
+  repository: file://../hadoop
+  condition: hadoop.enabled
 - name: zookeeper
   version: 10.0.2
   repository: https://charts.bitnami.com/bitnami

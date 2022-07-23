@@ -57,7 +57,7 @@ HBase is an open-source non-relational distributed database modeled after Google
 | prometheus.enabled | bool | `true` |  |
 | prometheus.image | string | `"spdigital/prometheus-jmx-exporter-kubernetes"` |  |
 | prometheus.imageTag | string | `"0.3.1"` |  |
-| prometheus.port | int | `5556` |  |
+| prometheus.port | int | `9709` |  |
 | prometheus.resources | object | `{}` |  |
 | prometheus.thriftPort | int | `5557` |  |
 | zookeeper.enabled | bool | `true` |  |

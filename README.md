@@ -2,6 +2,36 @@
 
 Curated Big Data charts for Kubernetes.
 
+
+hbase backup:
+
+[https://blog.clairvoyantsoft.com/hbase-incremental-table-backup-and-disaster-recovery-using-aws-s3-storage-aa2bc1b40744](https://blog.clairvoyantsoft.com/hbase-incremental-table-backup-and-disaster-recovery-using-aws-s3-storage-aa2bc1b40744)
+
+
+**Run hbase**
+
+```bash
+cd charts/hbase
+helm dependency build
+helm install hbase .
+```
+
+```
+presumption
+
+nm: namemanager, rm: resource manager, dn: datanode, nn: namenode 
+hm: hbase-master, hrs: hbase-regionserver
+
+nm --> rm
+dn --> nn
+
+hm --> nm
+hrs -> hm
+
+nn 71s
+rm 30s
+```
+
 ## Install chart from helm repository
 
 charts in `charts/`` folder are packaged and available at Gradiant's helm repo:  
