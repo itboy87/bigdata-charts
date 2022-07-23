@@ -95,4 +95,4 @@ zookeeper:
   replicaCount: 3
   maxClientCnxns: 1000
   persistence:
-    enabled: false
+    enabled: true

@@ -19,8 +19,8 @@ hdfs:
         memory: "256Mi"
         cpu: "10m"
       limits:
-        memory: "2048Mi"
-        cpu: "1000m"
+        memory: "400Mi"
+        cpu: "200m"
 
   dataNode:
     # Will be used as dfs.datanode.hostname
@@ -39,8 +39,8 @@ hdfs:
         memory: "256Mi"
         cpu: "10m"
       limits:
-        memory: "2048Mi"
-        cpu: "1000m"
+        memory: "400Mi"
+        cpu: "200m"
 
   webhdfs:
     enabled: true
@@ -70,8 +70,8 @@ yarn:
     # This should be tuned to fit your workload.
     resources:
       requests:
-        memory: "2048Mi"
-        cpu: "1000m"
+        memory: "400Mi"
+        cpu: "200m"
       limits:
         memory: "2048Mi"
         cpu: "1000m"
